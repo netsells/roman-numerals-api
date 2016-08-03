@@ -1,27 +1,25 @@
-# Laravel PHP Framework
-
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
-
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
-
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
-
-## Official Documentation
-
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+# Roman Numerals API Task
+This development task is based on the Roman Numeral code kata which may have already been
+completed during this recruitment process. This task requires you to build a JSON API and
+so any HTML, CSS or JavaScript that is submitted will not be reviewed.
+ 
+ ## Brief
+ Our client (Numeral McNumberFace) requires a simple API which will convert an integer to
+ its roman numeral counterpart. After our discussions with the client, we have discovered
+ that the solution will contain 2 API endpoints, and will only support integers ranging from
+ 0 to 3999.
+ 
+ ### Endpoints Required
+ 1. Accepts an integer, converts it to a roman numeral, stores it in the database and returns
+ the response.
+ 2. Lists all of the recently converted integers. With actual date/time and an human readable
+ counterpart (e.g. 9 minutes ago).
+ 
+ ## What we are looking for
+ - Use of MVC components (View in this instance can be, for example, a fractal transformer).
+ - Use of either Fractal or Dingo.
+ - Use of Eloquent, Requests and Routes.
+ - A class which implements the supplied interface.
+ - The supplied PHPUnit test passing.
+ - Clean, well-commented code.
+ 
