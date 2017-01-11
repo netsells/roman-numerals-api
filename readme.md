@@ -1,7 +1,5 @@
 # Roman Numerals API Task
-This development task is based on the Roman Numeral code kata which may have already been
-completed during this recruitment process. This task requires you to build a JSON API and
-so any HTML, CSS or JavaScript that is submitted will not be reviewed.
+This development task is based on the Roman Numeral code kata which may have already been completed during this recruitment process. This task requires you to build a JSON API and so any HTML, CSS or JavaScript that is submitted will not be reviewed.
  
 ## Brief
 Our client (Numeral McNumberFace) requires a simple API which will convert an integer to its roman numeral counterpart. After our discussions with the client, we have discovered that the solution will contain 3 API endpoints, and will only support integers ranging from 1 to 3999. The client wishes to keep track of conversions so they can determine which is the most frequently converted integer, and the last time this was converted.
@@ -13,7 +11,7 @@ Our client (Numeral McNumberFace) requires a simple API which will convert an in
  
 ## What we are looking for
  - Use of MVC components (View in this instance can be, for example, a fractal transformer).
- - Use of either Fractal or Dingo.
+ - Use of [Fractal](http://fractal.thephpleague.com/) and Transformers.
  - Use of Eloquent, Requests and Routes.
  - A class which implements the supplied interface.
  - The supplied PHPUnit test passing.
