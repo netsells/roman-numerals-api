@@ -17,3 +17,5 @@ Our client (Numeral McNumberFace) requires a simple API which will convert an in
  - The supplied PHPUnit test passing.
  - Clean, well-commented code.
  
+ ## Submission Instructions
+- Please push your submission into either a public GitHub repo or a private repo, and give access to james.judd@netsells.co.uk
