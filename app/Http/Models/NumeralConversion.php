@@ -2,6 +2,7 @@
 
 namespace App\Http\Models ;
 
+use DB ;
 use Illuminate\Database\Eloquent\Model ;
 
 class NumeralConversion extends Model
@@ -18,7 +19,7 @@ class NumeralConversion extends Model
      * NumeralConversion is an Eloquent-singleton under the hood.
      * Here we save a row in the table by creating a new row instance.
      */
-    protected static function record ($integer, $numeral)
+    public static function record ($integer, $numeral)
     {
         $numeralConversion = new NumeralConversion() ;
         $numeralConversion->integer = $integer ;
@@ -26,4 +27,30 @@ class NumeralConversion extends Model
         $numeralConversion->save() ;
     }
 
+    /*
+     * Here we get the top N entries.
+     */
+    public static function top ($count)
+    {
+        return NumeralConversion::select([
+                'integer',
+                'numeral', 
+                DB::raw('COUNT(`id`) AS frequency')
+            ])
+            ->groupBy('integer')
+            ->orderByRaw('frequency DESC')
+            ->limit((int)$count)
+            ->get() ;
+    }
+
+    /*
+     * Here we get the last N entries.
+     */
+    public static function last ($count)
+    {
+        return NumeralConversion::select(['integer', 'numeral'])
+            ->orderByRaw('id DESC')
+            ->limit((int)$count)
+            ->get() ;
+    }
 }
