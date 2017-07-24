@@ -4,5 +4,5 @@ namespace App;
 
 interface IntegerConversionInterface
 {
-    public function toRomanNumerals($integer);
+    public static function toRomanNumerals($integer);
 }
