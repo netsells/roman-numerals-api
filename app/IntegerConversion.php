@@ -2,8 +2,15 @@
 
 namespace App;
 
+/**
+ * Class IntegerConversion
+ * @package App
+ */
 class IntegerConversion implements IntegerConversionInterface
 {
+    /**
+     * @var array
+     */
     protected static $lookup = [
         1000 => 'M',
         900 => 'CM',
@@ -20,13 +27,17 @@ class IntegerConversion implements IntegerConversionInterface
         1 => 'I'
     ];
 
+    /**
+     * @param $number
+     * @return bool|string
+     */
     public function toRomanNumerals($number)
     {
-        if($number > 3999) return false;
+        if ($number > 3999) return false;
 
-        $result = '' ;
-        foreach(static::$lookup as $num => $latin) {
-            while($number >= $num ){
+        $result = '';
+        foreach (static::$lookup as $num => $latin) {
+            while ($number >= $num) {
                 $result .= $latin;
                 $number -= $num;
             }
