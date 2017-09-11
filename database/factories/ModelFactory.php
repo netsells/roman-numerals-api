@@ -11,11 +11,15 @@
 |
 */
 
-$factory->define(App\User::class, function (Faker\Generator $faker) {
+use App\Models\RomanNumeral;
+
+
+$factory->define(RomanNumeral::class, function (Faker\Generator $faker) {
+    $converter = new \App\IntegerConversion();
+    $num = random_int(1,3999);
     return [
-        'name' => $faker->name,
-        'email' => $faker->safeEmail,
-        'password' => bcrypt(str_random(10)),
-        'remember_token' => str_random(10),
+        'intNumber' => $num,
+        'romanNumber' => $converter->toRomanNumerals($num),
+        'hits' => random_int(1,10000)
     ];
 });
