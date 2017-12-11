@@ -11,11 +11,11 @@ Our client (Numeral McNumberFace) requires a simple API which will convert an in
  
 ## What we are looking for
  - Use of MVC components (View in this instance can be, for example, a fractal transformer).
- - Use of [Fractal](http://fractal.thephpleague.com/) and Transformers.
+ - Use of [Fractal](http://fractal.thephpleague.com/) and Transformers - here is a Laravel specific Fractal package: https://github.com/spatie/laravel-fractal
  - Use of Eloquent, Requests and Routes.
  - A class which implements the supplied interface.
  - The supplied PHPUnit test passing.
- - Clean, well-commented code.
+ - Clean, well-commented code - We use PSR-2 at Netsells.
  
  ## Submission Instructions
 - Please push your submission into either a public GitHub repo or a private repo, and give access to james.judd@netsells.co.uk
