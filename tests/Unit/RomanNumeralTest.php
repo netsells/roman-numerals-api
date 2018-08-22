@@ -1,8 +1,11 @@
 <?php
 
+namespace Tests\Unit;
+
 use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
+use Tests\TestCase;
 
 class RomanNumeralTest extends TestCase
 {
@@ -34,5 +37,6 @@ class RomanNumeralTest extends TestCase
         // Test more unique integers
         $this->assertEquals('MMMCMXCIX', $class->toRomanNumerals(3999));
         $this->assertEquals('MMXVI', $class->toRomanNumerals(2016));
+        $this->assertEquals('MMXVIII', $class->toRomanNumerals(2018));
     }
 }
