@@ -11,7 +11,9 @@ Our client (Numeral McNumberFace) requires a simple API which will convert an in
  
 ## What we are looking for
  - Use of MVC components (View in this instance can be, for example, a fractal transformer).
- - Use of [Fractal](http://fractal.thephpleague.com/) and Transformers - here is a Laravel specific Fractal package: https://github.com/spatie/laravel-fractal
+ - Use of [Fractal](http://fractal.thephpleague.com/) and Transformers 
+    - here is a [Laravel specific Fractal package](https://github.com/spatie/laravel-fractal)
+ - **OR** You may also use [Laravel Resources](https://laravel.com/docs/5.6/eloquent-resources) if you wish!
  - Use of Eloquent, Requests and Routes.
  - A class which implements the supplied interface.
  - The supplied PHPUnit test passing.
