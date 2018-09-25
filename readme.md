@@ -20,4 +20,7 @@ Our client (Numeral McNumberFace) requires a simple API which will convert an in
  - Clean, well-commented code - We use PSR-2 at Netsells.
  
  ## Submission Instructions
-- Please push your submission into either a public GitHub repo or a private repo, and give access to james.judd@netsells.co.uk
+Please create a [git bundle](https://git-scm.com/docs/git-bundle/) and send the file across:
+```
+git bundle create <yourname>.bundle --all --branches
+```
