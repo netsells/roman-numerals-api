@@ -33,6 +33,6 @@ services:
     working_dir: /web
     volumes:
       - .:/web
-      - ./dockerfiles/php-fpm/php-ini-overrides.ini:/etc/php/7.3/fpm/conf.d/99-overrides.ini
+      - ./dockerfiles/php-fpm/php-ini-overrides.ini:/etc/php/7.4/fpm/conf.d/99-overrides.ini
     links:
       - mariadb:db
