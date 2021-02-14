@@ -1,0 +1,38 @@
+version: "3.1"
+services:
+
+  mariadb:
+    image: mariadb:10.4
+    container_name: roman-numerals-mariadb
+    working_dir: /web
+    volumes:
+      - .:/web
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_DATABASE=roman_numerals
+      - MYSQL_USER=roman
+      - MYSQL_PASSWORD=numerals
+    ports:
+      - "9003:3306"
+
+  webserver:
+    image: nginx:alpine
+    container_name: roman-numerals-webserver
+    working_dir: /web
+    volumes:
+      - .:/web
+      - ./dockerfiles/nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+    ports:
+      - "8014:80"
+    links:
+      - mariadb:db
+
+  php-fpm:
+    build: dockerfiles/php-fpm
+    container_name: roman-numerals-php
+    working_dir: /web
+    volumes:
+      - .:/web
+      - ./dockerfiles/php-fpm/php-ini-overrides.ini:/etc/php/7.4/fpm/conf.d/99-overrides.ini
+    links:
+      - mariadb:db
