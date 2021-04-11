@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\Api\NumeralsController;
+use App\Http\Resources\NumeralResource;
+use App\Models\Numeral;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -16,4 +19,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
+});
+
+Route::prefix('/v1')->group(function () {
+    Route::post('/numerals', [NumeralsController::class, 'convert']);
+    Route::get('/numerals', [NumeralsController::class, 'index']);
+    Route::get('/numerals/top', [NumeralsController::class, 'top']);
 });

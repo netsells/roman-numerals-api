@@ -1,0 +1,10 @@
+services:
+  roman-numerals-api:
+    # image: php:8-alpine3.13
+    container_name: roman_numerals_api
+    ports:
+      - 8000:8000
+    volumes:
+      - ./:/app
+    working_dir: /app
+    build: .
