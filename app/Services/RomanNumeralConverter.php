@@ -38,7 +38,6 @@ class RomanNumeralConverter implements IntegerConverterInterface
         if (array_key_exists($integer, static::NUMERAL_LOOKUP)) {
             return static::NUMERAL_LOOKUP[$integer];
         }
-
         $numeralString = '';
 
         foreach (static::NUMERAL_LOOKUP as $number => $numeral) {

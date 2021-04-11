@@ -55,7 +55,6 @@ class NumeralsController extends Controller
         return NumeralConversionResource::collection($numerals);
     }
 
-
     /**
      * Returns the top 10 converted numerals
      * 
