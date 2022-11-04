@@ -14,6 +14,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+Route::group(['prefix' => '/convert'], function ($router) {
+    $router->post('', [
+        'as' => 'convert.store', 'uses' => 'ConversionController@store'
+    ]);
+    $router->get('/top', [
+        'as' => 'convert.top', 'uses' => 'ConversionController@top'
+    ]);
+    $router->get('/recent', [
+        'as' => 'convert.index', 'uses' => 'ConversionController@index'
+    ]);
 });
