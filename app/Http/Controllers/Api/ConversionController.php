@@ -35,6 +35,7 @@ class ConversionController extends Controller
         return ConversionResource::collection(Conversion::select('number', DB::raw('COUNT(number) as count'))
             ->groupBy('number')
             ->orderBy('count', 'DESC')
+            ->take(10)
             ->get());
     }
 
