@@ -2,8 +2,9 @@
 
 namespace Tests\Unit;
 
-use App\Services\RomanNumeralConverter;
 use PHPUnit\Framework\TestCase;
+use App\Helpers\ConversionHelper;
+use App\Services\RomanNumeralConverter;
 
 class RomanNumeralTest extends TestCase
 {
@@ -36,12 +37,12 @@ class RomanNumeralTest extends TestCase
         ];
 
         foreach ($toTest as $returnValue => $integer) {
-            $this->assertEquals($returnValue, $this->converter->convertInteger($integer));
+            $this->assertEquals($returnValue, (new ConversionHelper)->convert($integer));
         }
 
         // Test more unique integers
-        $this->assertEquals('MMMCMXCIX', $this->converter->convertInteger(3999));
-        $this->assertEquals('MMXVI', $this->converter->convertInteger(2016));
-        $this->assertEquals('MMXVIII', $this->converter->convertInteger(2018));
+        $this->assertEquals('MMMCMXCIX', (new ConversionHelper)->convert(3999));
+        $this->assertEquals('MMXVI', (new ConversionHelper)->convert(2016));
+        $this->assertEquals('MMXVIII', (new ConversionHelper)->convert(2018));
     }
 }
